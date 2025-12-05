@@ -31,6 +31,9 @@ python main.py
 ```
 ---
 
+## Natija
+![Screenshot](Screenshot.png)
+
 ## Litsenziya
 
 MIT License
