@@ -5,7 +5,7 @@ Valyuta kursini bashorat qilish uchun Python loyihasi. Ushbu loyiha API orqali m
 ---
 
 ## Loyihaning tuzilishi
-
+```
 currency_forecast/
 │
 ├─ data/                  # API orqali olingan ma'lumotlar saqlanadi
@@ -19,19 +19,19 @@ currency_forecast/
 ├─ requirements.txt       # Kutubxonalar
 ├─ README.md              # Loyihaning tavsifi
 └─ .gitignore
-
+```
 ---
 
 ## Kutubxonalarni o‘rnatish
-
+```
 pip install -r requirements.txt
-
+```
 ---
 
 ## Dastur ishga tushirish
-
-python src/main.py
-
+```
+python -m src.main
+```
 ---
 
 ## Foydalanish bosqichlari
