@@ -23,15 +23,15 @@ currency_forecast/
 ---
 
 ## Kutubxonalarni o‘rnatish
-
+```
 pip install -r requirements.txt
-
+```
 ---
 
 ## Dastur ishga tushirish
-
+```
 python src/main.py
-
+```
 ---
 
 ## Foydalanish bosqichlari
