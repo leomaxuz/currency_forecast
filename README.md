@@ -1,39 +1,42 @@
-# Valyuta Kursi Bashorati
+# Currency Forecast (Valyuta Kursi Prognozi)
 
-Bu loyiha O'zbekiston Respublikasi Markaziy bankining arxiv ma'lumotlariga asoslangan holda **USD kursini so'mga nisbatan bashorat qiladi**.  
+Ushbu loyiha O'zbekiston Markaziy Banki (CBU) ma'lumotlariga asoslanib, AQSh dollari (USD) kursini sun'iy intellekt (**LSTM**) yordamida prognoz qiladi.
 
-## Texnologiyalar
-- Python
-- Pandas
-- NumPy
-- scikit-learn (MinMaxScaler, LinearRegression)
-- Matplotlib
+## Xususiyatlari
+*   **Avtomatik Ma'lumot Yig'ish**: Internetdan eng so'nggi kurslarni yuklab oladi (`dataset.py`).
+*   **Retry Logic**: Internet uzilishlarida qayta urinish tizimi mavjud.
+*   **Deep Learning (LSTM)**: An'anaviy usullardan ko'ra aniqroq bo'lgan neyron tarmoq modeli.
+*   **Interaktiv Grafika**: `Plotly` yordamida harakatlanuvchi va ma'lumotga boy grafiklar.
+*   **Ma'lumotlarni Saqlash**: Barcha ma'lumotlar `data/` papkasida tartibli saqlanadi.
 
-## Funktsional
-1. USD kursini CBU API dan olish
-2. 7 va 30 kunlik kelajak kursini bashorat qilish
-3. Grafikda real va prognoz qilingan kurslarni ko‘rsatish
-4. Ko‘tarilgan va tushgan kunlarni belgilash
-5. Kod dokumentatsiyasi va izohlar bilan toza tuzilma
+## O'rnatish
 
----
+1.  Ushbu repozitoriyni yuklab oling.
+2.  Kerakli kutubxonalarni o'rnating:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Kutubxonalarni o‘rnatish
-```
-pip install -r requirements.txt
-```
----
+## Ishlatish
 
-## Foydalanish
+Dasturni ishga tushirish uchun:
 
 ```bash
 python main.py
 ```
----
 
-## Natija
-![Screenshot](Screenshot.png)
+Bu buyruq quyidagilarni bajaradi:
+1.  Yangi ma'lumotlarni tekshiradi va yuklaydi.
+2.  Agar model yo'q bo'lsa, yangi LSTM modelini o'qitadi (bu biroz vaqt olishi mumkin).
+3.  Keyingi 30 kunlik kursni prognoz qiladi.
+4.  Brauzerda interaktiv grafikni ochadi.
 
-## Litsenziya
+## Fayl Tuzilmasi
 
-MIT License
+*   `main.py` - Asosiy dastur (Model, Prognoz, Vizualizatsiya).
+*   `dataset.py` - Ma'lumotlarni yig'ish va tozalash moduli.
+*   `data/` - Ma'lumotlar va saqlangan modellar papkasi.
+*   `requirements.txt` - Kerakli kutubxonalar ro'yxati.
+
+## Muallif
+Loyiha yangilandi va refactoring qilindi.
